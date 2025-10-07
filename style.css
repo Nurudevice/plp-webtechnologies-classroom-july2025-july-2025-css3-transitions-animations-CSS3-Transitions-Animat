@@ -1,0 +1,110 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f8fc;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s ease;
+}
+
+header {
+  background: linear-gradient(90deg, #0077cc, #00bcd4);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Part 1: CSS3 Transitions and Animations ===== */
+
+/* Smooth hover transition */
+.animated-btn {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+.animated-btn:hover {
+  background: #00bcd4;
+  transform: scale(1.1);
+}
+
+/* Keyframe-based animation */
+.animated-box {
+  width: 80px;
+  height: 80px;
+  background: #0077cc;
+  border-radius: 12px;
+  margin-top: 20px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    background: #0077cc;
+  }
+  50% {
+    transform: rotate(180deg);
+    background: #00bcd4;
+  }
+  100% {
+    transform: rotate(360deg);
+    background: #0077cc;
+  }
+}
+
+/* ===== Part 3: JS-triggered Animation ===== */
+#jsBox {
+  width: 100px;
+  height: 100px;
+  background: #ff5722;
+  border-radius: 12px;
+  margin-top: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Class added dynamically with JS */
+.animate-move {
+  animation: moveSlide 2s ease forwards;
+}
+
+@keyframes moveSlide {
+  0% {
+    transform: translateX(0);
+    background: #ff5722;
+  }
+  50% {
+    transform: translateX(120px) scale(1.2);
+    background: #ff9800;
+  }
+  100% {
+    transform: translateX(0);
+    background: #ff5722;
+  }
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
